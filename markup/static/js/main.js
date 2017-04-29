@@ -1,5 +1,8 @@
-'use strict';
+import * as PIXI from 'pixi.js';
+import 'pixi-spine';
 
-/*
-    This file can be used as entry point for webpack!
- */
+import Game    from '../../components/game/game';
+import Preload from '../../components/preload/preload';
+
+new Game(1024, 768);
+new Preload();

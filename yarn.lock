@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/pixi.js@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@types/pixi.js/-/pixi.js-4.3.1.tgz#bd770b0fe129cca9dba4d86859b272923b27f1cf"
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -696,6 +700,10 @@ graceful-fs@~1.2.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-1.2.3.tgz#15a4806a57547cb2d2dbf27f42e89a8c3451b364"
 
+gsap@^1.19.1:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-1.19.1.tgz#480d320c662337c2663f836baf45e91ea024b553"
+
 gulp-util@^3.0.0:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
@@ -1187,6 +1195,12 @@ pixi-gl-core@^1.0.3:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pixi-gl-core/-/pixi-gl-core-1.1.0.tgz#a52cb4dd3254f9c7857a0e9c2356b00e6ec0c761"
 
+pixi-spine@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/pixi-spine/-/pixi-spine-1.4.2.tgz#8594389805120b3cbd5703e26a8c929e24708848"
+  dependencies:
+    "@types/pixi.js" "4.3.1"
+
 pixi.js@^4.5.1:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/pixi.js/-/pixi.js-4.5.1.tgz#74464b809fc6cc2b9c26b049ce0bf93096a45d21"
@@ -1335,6 +1349,12 @@ resource-loader@^2.0.6:
     mini-signals "^1.1.1"
     parse-uri "^1.0.0"
 
+rxjs@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.3.0.tgz#d88ccbdd46af290cbdb97d5d8055e52453fabe2d"
+  dependencies:
+    symbol-observable "^1.0.1"
+
 semver@^4.1.0:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
@@ -1381,6 +1401,10 @@ strip-bom@^1.0.0:
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
+
+symbol-observable@^1.0.1:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
 
 through2@^0.6.1:
   version "0.6.5"
