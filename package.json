@@ -1,0 +1,31 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "pixi.js": "^4.5.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "ignore": [
+      "**/babel_ignore_*.js",
+      "*/js/framework/*.js",
+      "*/js/libraries/*.js",
+      "*/js/plugins/*.js",
+      "*/js/separate-js/*.js"
+    ]
+  },
+  "author": "",
+  "license": "ISC"
+}
