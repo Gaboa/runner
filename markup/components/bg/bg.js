@@ -1,5 +1,7 @@
 import * as PIXI from 'pixi.js';
-import { TimelineLite } from 'gsap';
+import p2 from 'p2';
+
+import Tiles from '../tiles/tiles';
 
 export default class BG extends PIXI.Container {
 
@@ -10,48 +12,52 @@ export default class BG extends PIXI.Container {
         this.container = container;
         this.container.addChild(this);
 
-        this.addBG();
+        this.back = new Tiles({
+            container: this,
+            amount: 5,
+            velocity: 1.5,
+            map: ['day', 'day', 'night', 'day', 'night', 'day', 'night', 'night', 'night', 'night']
+        });
+
+        this.middle = new Tiles({
+            container: this,
+            amount: 5,
+            velocity: 2,
+            map: ['night', 'day', 'night', 'day', 'day', 'night', 'day', 'night', 'night']
+        });
+        this.middle.y = 250;
+
         this.addGround();
-        this.addParalax();
-    }
-
-    addBG() {
-
-        this.bg1 = new PIXI.Sprite(PIXI.utils.TextureCache.bg);
-        this.bg2 = new PIXI.Sprite(PIXI.utils.TextureCache.bg);
-        this.bg2.x = this.bg1.width;
-        this.addChild(this.bg1, this.bg2);
-
     }
 
     addGround() {
 
         this.ground = new PIXI.Graphics();
         this.ground.beginFill(0x333333);
-        this.ground.drawRect(0, 600, game.width, game.height);
+        this.ground.drawRect(0, 600, game.width, 100);
         this.ground.endFill();
+
+        this.addPhysics();
+
+        this.ground.position.x = this.boxBody.position[0];
+        this.ground.position.y = this.boxBody.position[1];
+        this.ground.rotation   = this.boxBody.angle;
 
         this.addChild(this.ground);
 
     }
 
-    addParalax() {
-        this.timeline = new TimelineLite();
-        this.addTween();
-    }
+    addPhysics() {
 
-    addTween() {
-        this.timeline.set(this.bg1, {x: 0});
-        this.timeline.to(this.bg1, 10, {
-            x: -this.bg1.width * 0.5,
-            ease: Power0.easeNone,
-            onComplete: () => this.addTween()
+        this.boxShape = new p2.Box({ width: 200, height: 100 });
+        this.boxBody = new p2.Body({
+            mass: 10,
+            position: [0, 2],
+            angularVelocity: 1
         });
-        this.timeline.timeScale(game.velocity);
-    }
+        this.boxBody.addShape(this.boxShape);
+        game.world.addBody(this.boxBody);
 
-    updateVelocity() {
-        this.timeline.timeScale(game.velocity);
     }
 
 }
