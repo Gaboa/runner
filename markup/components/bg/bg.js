@@ -32,31 +32,48 @@ export default class BG extends PIXI.Container {
 
     addGround() {
 
-        this.ground = new PIXI.Graphics();
+        this.ground      = new PIXI.Graphics();
+        this.ground.box  = new p2.Box({ width: game.view.width, height: game.view.height * 0.3 });
+        this.ground.body = new p2.Body({
+            mass: 500,
+            position: [game.view.width * 0.5, 200]
+        });
+
         this.ground.beginFill(0x333333);
-        this.ground.drawRect(0, 600, game.width, 100);
+        this.ground.drawRect(0, 0, this.ground.box.width, this.ground.box.height);
         this.ground.endFill();
+        this.ground.pivot.set(this.ground.width * 0.5, this.ground.height * 0.5);
 
-        this.addPhysics();
-
-        this.ground.position.x = this.boxBody.position[0];
-        this.ground.position.y = this.boxBody.position[1];
-        this.ground.rotation   = this.boxBody.angle;
-
+        this.ground.body.addShape(this.ground.box);
+        game.world.addBody(this.ground.body);
         this.addChild(this.ground);
+
+        game.ticker.add(() => {
+            this.updateGround();
+        });
+
+        this.plane = new PIXI.Graphics();
+        this.plane.shape = new p2.Plane({
+            angle: 90
+        });
+        this.plane.body  = new p2.Body({
+            position: [500, 600]
+        });
+        this.plane.lineStyle(4, 0xffd900, 1);
+        this.plane.moveTo(0, this.plane.body.position[1]);
+        this.plane.lineTo(game.view.width, this.plane.body.position[1]);
+
+        this.plane.body.addShape(this.plane.shape);
+        game.world.addBody(this.plane.body);
+        this.addChild(this.plane);
 
     }
 
-    addPhysics() {
+    updateGround() {
 
-        this.boxShape = new p2.Box({ width: 200, height: 100 });
-        this.boxBody = new p2.Body({
-            mass: 10,
-            position: [0, 2],
-            angularVelocity: 1
-        });
-        this.boxBody.addShape(this.boxShape);
-        game.world.addBody(this.boxBody);
+        this.ground.position.x = this.ground.body.position[0];
+        this.ground.position.y = this.ground.body.position[1];
+        this.ground.rotation   = this.ground.body.angle;
 
     }
 

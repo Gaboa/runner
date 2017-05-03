@@ -3,9 +3,10 @@ import * as PIXI from 'pixi.js';
 export default class Character extends PIXI.spine.Spine {
 
     constructor({
-        container
+        container,
+        name = 'spine_boy'
     }) {
-        super(game.loader.resources.spine_boy.spineData);
+        super(game.loader.resources[`${name}`].spineData);
         this.container = container;
         this.container.addChild(this);
 
@@ -13,7 +14,12 @@ export default class Character extends PIXI.spine.Spine {
         this.y = 600;
         this.scale.set(0.3);
 
-        this.state.setAnimation(0, 'walk', true);
+        this.state.setAnimation(0, 'run', true);
+
+        // this.stateData.setMix('walk', 'jump', 0.2);
+        // this.stateData.setMix('jump', 'walk', 0.2);
+        // this.stateData.setMix('run', 'walk', 0.2);
+        // this.stateData.setMix('walk', 'run', 0.2);
     }
 
     jump() {

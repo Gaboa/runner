@@ -1,3 +1,5 @@
+import p2 from 'p2';
+
 export default class Game extends PIXI.Application {
     constructor(width, height, options) {
         // Initialize
@@ -37,6 +39,9 @@ export default class Game extends PIXI.Application {
             }
 
         };
+
+        // Setup physics
+        this.setupPhysics();
 
     }
 
@@ -95,6 +100,17 @@ export default class Game extends PIXI.Application {
         } else if (document.webkitCancelFullScreen) {
             document.webkitCancelFullScreen();
         }
+    }
+
+    setupPhysics() {
+
+        this.world = new p2.World({
+            gravity: [0, 50]
+        });
+        this.ticker.add(() => {
+            this.world.step(1 / 60);
+        });
+
     }
 
 }

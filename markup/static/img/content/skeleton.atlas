@@ -1,0 +1,104 @@
+
+skeleton.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Character/for animation/B_arm
+  rotate: true
+  xy: 321, 57
+  size: 143, 210
+  orig: 143, 210
+  offset: 0, 0
+  index: -1
+Character/for animation/B_legg
+  rotate: true
+  xy: 1376, 363
+  size: 147, 362
+  orig: 147, 362
+  offset: 0, 0
+  index: -1
+Character/for animation/Body
+  rotate: true
+  xy: 1740, 362
+  size: 148, 252
+  orig: 148, 252
+  offset: 0, 0
+  index: -1
+Character/for animation/F_arm
+  rotate: true
+  xy: 1398, 198
+  size: 163, 202
+  orig: 163, 202
+  offset: 0, 0
+  index: -1
+Character/for animation/F_legg
+  rotate: true
+  xy: 982, 363
+  size: 147, 392
+  orig: 147, 392
+  offset: 0, 0
+  index: -1
+Character/for animation/brow
+  rotate: false
+  xy: 616, 229
+  size: 39, 49
+  orig: 39, 49
+  offset: 0, 0
+  index: -1
+Character/for animation/dress1
+  rotate: true
+  xy: 982, 138
+  size: 223, 230
+  orig: 223, 230
+  offset: 0, 0
+  index: -1
+Character/for animation/dress2
+  rotate: false
+  xy: 321, 202
+  size: 293, 308
+  orig: 293, 308
+  offset: 0, 0
+  index: -1
+Character/for animation/eye
+  rotate: true
+  xy: 2, 2
+  size: 53, 55
+  orig: 53, 55
+  offset: 0, 0
+  index: -1
+Character/for animation/face
+  rotate: false
+  xy: 1214, 161
+  size: 182, 200
+  orig: 182, 200
+  offset: 0, 0
+  index: -1
+Character/for animation/hair
+  rotate: false
+  xy: 2, 65
+  size: 317, 445
+  orig: 317, 445
+  offset: 0, 0
+  index: -1
+Character/for animation/leaps
+  rotate: false
+  xy: 533, 184
+  size: 30, 16
+  orig: 30, 16
+  offset: 0, 0
+  index: -1
+Character/for animation/neck
+  rotate: false
+  xy: 1994, 460
+  size: 45, 50
+  orig: 45, 50
+  offset: 0, 0
+  index: -1
+Character/for animation/thorn
+  rotate: false
+  xy: 616, 280
+  size: 364, 230
+  orig: 364, 230
+  offset: 0, 0
+  index: -1

@@ -897,6 +897,10 @@ jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
 
+json-loader@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/json-loader/-/json-loader-0.5.4.tgz#8baa1365a632f58a3c46d20175fc6002c96e37de"
+
 kind-of@^3.0.2:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.0.tgz#b58abe4d5c044ad33726a8c1525b48cf891bff07"
@@ -1046,6 +1050,10 @@ map-cache@^0.2.0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
 
+matter-js@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/matter-js/-/matter-js-0.12.0.tgz#dcb02d04326c47746c63a3772d1475753d72fe1e"
+
 micromatch@^2.3.7:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
@@ -1152,6 +1160,12 @@ os-homedir@^1.0.0, os-homedir@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
 
+p2@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/p2/-/p2-0.7.1.tgz#25f2474d9bc3a6d3140a1da26a67c9e118ac9543"
+  dependencies:
+    poly-decomp "0.1.1"
+
 parse-filepath@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parse-filepath/-/parse-filepath-1.0.1.tgz#159d6155d43904d16c10ef698911da1e91969b73"
@@ -1212,6 +1226,10 @@ pixi.js@^4.5.1:
     object-assign "^4.0.1"
     pixi-gl-core "^1.0.3"
     resource-loader "^2.0.6"
+
+poly-decomp@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/poly-decomp/-/poly-decomp-0.1.1.tgz#9f68c4fa558663791c9ba4c2df7283f3096c23c9"
 
 preserve@^0.2.0:
   version "0.2.0"
